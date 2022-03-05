@@ -7,18 +7,12 @@ const paper = document.getElementById("p");
 const scissors = document.getElementById("s");
 
 function getComputerChoise() {
-  const rand = 1 - 0.5 + Math.random() * (3 - 1 + 1);
-  if (Math.round(rand) == 1) {
-    return "r";
-  } else if (Math.round(rand) == 2) {
-    return "p";
-  } else {
-    return "s";
-  }
+  const choices = ['r', 'p', 's'];
+  const rand = Math.floor(Math.random() * 3);
+  return choices[rand];
 }
 
 function game(userChoise) {
-  console.log(userChoise);
 }
 
 rock.addEventListener("click", () => {
